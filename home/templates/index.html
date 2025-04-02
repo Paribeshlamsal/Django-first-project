@@ -1,31 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Django Tutorial</title>
-  </head>
-  <body>
-    <h2>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, in nisi
-      saepe beatae voluptatum cumque soluta quam, consectetur, similique
-      mollitia totam culpa laborum est placeat iure! Debitis sit saepe
-      assumenda!
-    </h2>
+{% extends 'base.html' %}
 
-    <table>
-      <tr>
-        <th>S.N</th>
-        <th>Name</th>
-        <th>Age</th>
-      </tr>
-      {% for people in peoples %}
-      <tr>
-        <td>{{forloop.counter}}</td>
-        <td>{{people.name}}</td>
-        <td>{{people.age}}</td>
-      </tr>
-      {%endfor%}
-    </table>
-  </body>
-</html>
+{% block title %}Home - Hotel Management{% endblock %}
+
+{% block content %}
+<div class="text-center py-16 bg-blue-100">
+    <h1 class="text-4xl font-bold text-blue-600">Welcome to Our Hotel</h1>
+    <p class="text-lg text-gray-700 mt-4">Experience luxury and comfort in our hotel.</p>
+    <a href="{% url 'about_us' %}" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        Learn More
+    </a>
+</div>
+{% endblock %}

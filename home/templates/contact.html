@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us - Hotel Management{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto text-center py-16">
+    <h1 class="text-3xl font-semibold text-gray-800">Contact Us</h1>
+    <p class="mt-4 text-lg text-gray-600">
+        Have questions? Reach out to us anytime!
+    </p>
+
+    <div class="mt-6">
+        <p class="text-lg"><strong>Email:</strong> info@hotel.com</p>
+        <p class="text-lg"><strong>Phone:</strong> +123 456 7890</p>
+        <p class="text-lg"><strong>Address:</strong> 123 Luxury Street, City, Country</p>
+    </div>
+
+    <form class="mt-8 max-w-lg mx-auto bg-white p-6 shadow-lg rounded-lg">
+        <input type="text" placeholder="Your Name" class="w-full p-2 border rounded-md mb-4">
+        <input type="email" placeholder="Your Email" class="w-full p-2 border rounded-md mb-4">
+        <textarea placeholder="Your Message" class="w-full p-2 border rounded-md mb-4"></textarea>
+        <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+            Send Message
+        </button>
+    </form>
+</div>
+{% endblock %}
