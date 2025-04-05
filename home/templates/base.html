@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Hotel Management{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-900">
-
+  </head>
+  <body class="bg-gray-100 text-gray-900">
     <nav class="bg-blue-600 p-4 text-white text-center">
-        <a href="{% url 'home' %}" class="mx-4">Home</a>
-        <a href="{% url 'about_us' %}" class="mx-4">About</a>
-        <a href="{% url 'contact' %}" class="mx-4">Contact</a>
+      <a href="{% url 'home' %}" class="mx-4">Home</a>
+      <a href="{% url 'about_us' %}" class="mx-4">About</a>
+      <a href="{% url 'contact' %}" class="mx-4">Contact</a>
+      <a href="{% url 'recipe' %}" class="mx-4">Recipe</a>
     </nav>
 
-    <div class="container mx-auto p-6">
-        {% block content %}{% endblock %}
-    </div>
+    <div class="container mx-auto p-6">{% block content %}{% endblock %}</div>
 
-    <footer class="bg-blue-600 text-white text-center p-4 fixed bottom-0 w-full">
-        &copy; 2025 Hotel Management System
+    <footer
+      class="bg-blue-600 text-white text-center p-4 fixed bottom-0 w-full"
+    >
+      &copy; 2025 Hotel Management System
     </footer>
-
-</body>
+  </body>
 </html>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto mt-10 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-6 text-center">Add a New Recipe</h2>
+
+    <form method="POST" enctype="multipart/form-data" class="space-y-4">
+        {% csrf_token %}
+
+        <!-- Recipe Name -->
+        <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Recipe Name</label>
+            <input type="text" name="name" id="name" required
+                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- Description -->
+        <div>
+            <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+            <textarea name="description" id="description" rows="4" required
+                      class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+        </div>
+
+        <!-- Image Upload -->
+        <div>
+            <label for="image" class="block text-sm font-medium text-gray-700">Recipe Image</label>
+            <input type="file" name="image" id="image" accept="image/*" required
+                   class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit"
+                    class="bg-blue-600 text-white font-bold py-2 px-6 rounded hover:bg-blue-700 transition duration-200">
+                Submit Recipe
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
